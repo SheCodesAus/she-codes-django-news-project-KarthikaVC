@@ -1,6 +1,12 @@
 <nav>
-    <a href="{% url 'news:index' %}">Home</a>
-    <a href="#">username</a>
-    <a href="#">Logout</a>
-    <a href="#">Login</a>
+    <ul>
+    
+    <li><a href="{% url 'news:index' %}">Home</a></li>
+    {% if request.user.is_authenticated %}
+        <li><a href="#">{{ user.username }}</a></li>
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+    {% else %}
+        <li><a href="{% url 'login' %}">Login</a></li>
+    {% endif %}
+    </ul>
 </nav>

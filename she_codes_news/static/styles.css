@@ -8,11 +8,14 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #000;/*Added by Karthika V*/
+    background-image: url("news/images/cupcake-1.jpg");
+    height: 150px;
 }
 
 img {
-    filter: grayscale(100%);
+   /* filter: grayscale(100%); Removed and updated by Karthika V*/
+   filter: none;
 }
 
 h1 {
@@ -20,10 +23,13 @@ h1 {
     text-decoration: none;
     font-size: 4rem;
     margin: 0;
+    color: #6b469a; /*Added by Karthika V*/
 }
 
 h2 {
    font-family: 'Montserrat Subrayada', sans-serif; 
+   background-color: #ffba00; /*Added by Karthika V*/
+   color: #6b469a; /*Added by Karthika V*/
 }
 
 h3 {
@@ -47,8 +53,51 @@ a {
     margin: 2px;
     text-decoration: none;
     color: #000;
+    
 }
+a.div-link{
+    font-size: 24px;
+    margin: 5px;
+}
+/*Added by Karthika V - START CODE*/
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 20px 10px;
 
+}
+nav ul li a{
+    color: #6b469a;
+    text-decoration: none; 
+    font-size: 18px;
+    position: relative;  
+    }
+/*Added by Karthika V - END CODE*/
 a, p {
     font-family: monospace;
+}
+/* Added by Karthika V  for Form Style*/
+form{
+    background: #6b469a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vw 4vw;
+    width: 90%;
+    font-weight: 800;
+    font-size: 18px;
+    border-radius: 10px;
+    color: #ffba00;
+}
+form button{
+    padding: 15px;
+    background-color: #ffba00;
+    color: #6b469a;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    cursor:pointer;
+    width: 150px;
+    margin: 20px auto 0;
+    border-radius: 30px;
 }
