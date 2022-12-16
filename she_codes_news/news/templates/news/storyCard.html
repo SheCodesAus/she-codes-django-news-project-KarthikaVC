@@ -6,8 +6,19 @@
             <img src="https://picsum.photos/300?random={{ story.id }}">
         {% endif %}
         <div class="story-card-text">
-            <h3>{{ story.title }}</h3>
-            <h4>{{ story.author }}  |  {{ story.pub_date }}</h4>
+            {% if request.user.is_authenticated %}
+                <h3>{{ story.title }}</h3>
+                <p><h4>{{ story.author }}  |  {{ story.pub_date }} | 
+                <a style="color: #6b469a;" href="{% url 'news:post_delete' story.id %}">Delete Story</a> | 
+                <a style="color: #6b469a;" href="{% url 'news:post_edit' story.id %}">Edit Story</a> </h4></p>
+            {% else %}
+                <h3>{{ story.title }}</h3>
+                <p><h4>{{ story.author }}  |  {{ story.pub_date }} </h4></p>
+            {% endif %}
+            
+        
         </div>
     </a>
 </div>
+
+

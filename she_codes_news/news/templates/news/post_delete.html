@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Delete Story Page</h2>
+
+<div class="container">
+    <form action="" method="POST">
+        {% csrf_token %}
+        Are you sure you want to delete "{{ story.title }}"  ?
+        <p>
+            <a class="del-link1" href="{% url 'news:index' %}">Go Back</a>
+        </p>
+        <input class="del-link2" type="submit" value="Confirm" />
+    </form>
+</div>
+
+{% endblock %}

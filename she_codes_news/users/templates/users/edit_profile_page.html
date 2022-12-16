@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if request.user.is_authenticated %}
+    <h2>Edit Profile Page </h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="edit-btn-class" type="submit" name="confirm">Update Profile</button>
+    </form>
+{% else %}
+    <a href="{% url 'login' %}">Login</a>
+{% endif %}
+
+{% endblock %}

@@ -3,10 +3,16 @@
     
     <li><a href="{% url 'news:index' %}">Home</a></li>
     {% if request.user.is_authenticated %}
-        <li><a href="#">{{ user.username }}</a></li>
+        <li><a href="{% url 'users:viewAccount' request.user.id %}"> {{ user.username }}'s Profile</a></li>
+        <li><a href="{% url 'news:myStories' %}">My Stories</a> </li>
         <li><a href="{% url 'logout' %}">Logout</a></li>
     {% else %}
         <li><a href="{% url 'login' %}">Login</a></li>
     {% endif %}
     </ul>
+    <form class="form-class" method=POST action="{% url 'news:search_author' %}">
+        {% csrf_token %}
+        <input type="search" placeholder="Story by Author" aria-label="Search" name="searched">
+        <button class="btn-search-class" type="submit">Search</button>
+    </form>
 </nav>

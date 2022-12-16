@@ -10,12 +10,12 @@ header {
     justify-content: space-between;
     border-bottom: 1px solid #000;/*Added by Karthika V*/
     background-image: url("news/images/cupcake-1.jpg");
-    height: 150px;
+    height: 200px;
 }
 
 img {
-   /* filter: grayscale(100%); Removed and updated by Karthika V*/
-   filter: none;
+/* filter: grayscale(100%); Removed and updated by Karthika V*/
+filter: none;
 }
 
 h1 {
@@ -56,14 +56,25 @@ a {
     
 }
 a.div-link{
-    font-size: 24px;
+    font-size: 18px;
     margin: 5px;
+
+    display: block;
+    width: 200px;
+    height: 25px;
+    background: #6b469a;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;
 }
 /*Added by Karthika V - START CODE*/
 nav ul li{
     display: inline-block;
     list-style: none;
-    margin: 20px 10px;
+    margin: 2px 10px;
 
 }
 nav ul li a{
@@ -71,8 +82,9 @@ nav ul li a{
     text-decoration: none; 
     font-size: 18px;
     position: relative;  
+    font-weight: 900
     }
-/*Added by Karthika V - END CODE*/
+
 a, p {
     font-family: monospace;
 }
@@ -101,3 +113,66 @@ form button{
     margin: 20px auto 0;
     border-radius: 30px;
 }
+.btn-account-class{
+    padding: 15px;
+    background-color: #ffba00;
+    color: #6b469a;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    cursor:pointer;
+    width: 150px;
+    margin: 20px auto 0;
+    border-radius: 30px;
+}
+
+.del-link1{
+    font-size: 18px;
+    margin: 5px;
+    display: block;
+    width: 100px;
+    height: 25px;
+    background: #ffba00;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;
+}
+.del-link2{
+    font-size: 18px;
+    margin: 5px;
+    display: block;
+    width: 100px;
+    height: 50px;
+    background: #ffba00;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;
+}
+.btn-search-class{
+    padding: 15px;
+    background-color: #ffba00;
+    color: #6b469a;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    cursor:pointer;
+    width: 150px;
+    margin: 20px auto 0;
+    border-radius: 30px;
+}
+.form-class{
+    background: #6b469a;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5vw 1vw;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px; 
+}
+/*Added by Karthika V - END CODE*/
