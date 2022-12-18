@@ -5,10 +5,10 @@
 <h2> </h2>
 <div id="latest-stories">
     {% if searched %}
-        <h3>You searched for Author - {{searched}} </h3>
-        <h4>All stories by Author are as below: </h4>
+        <h3>You searched for Author Name Consisting - {{searched}} </h3>
+        <h4>All stories by this Author are as below: </h4>
         {% for author in authors %}
-            Author : {{ author.author }} -  Title: <a href="{% url 'news:index' %}">{{author.title}}</a> <br/>
+            <strong>Author </strong> : {{ author.author }}  <br/> <strong> Title: </strong> <a href="{% url 'news:index' %}">{{author.title}}</a> <br/><br/>
         {% endfor %}
     {% else %}
         <p>No stories are available for author {{searched}} </p>
